@@ -120,10 +120,12 @@ public class Zoo {
         double sum = 0;
 
         for (int i = index; i <= gewichte.length - 1; i++) {
-            if (tiereAnzahl < 6 || sum <= LIMIT_CONTAINER) {
-                if (gewichte[i] < LIMIT_GROSZTIER) {
-                    sum = sum + gewichte[i];
-                    tiereAnzahl++;
+            if (tiereAnzahl < 5){
+                if (sum <= LIMIT_CONTAINER) {
+                    if (gewichte[i] < LIMIT_GROSZTIER) {
+                        sum = sum + gewichte[i];
+                        tiereAnzahl++;
+                    }
                 }
             }
         }
